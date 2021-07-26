@@ -37,7 +37,7 @@ public class AirCraftController {
     public ResponseEntity<String> bootAirCraftQueue(@RequestParam String status){
         StringBuilder stringBuilder = new StringBuilder();
         ResponseEntity<String> responseEntity = null;
-        if(!status.equals("on") || !status.equals("off")){
+        if(!status.equals("on") && !status.equals("off")){
         stringBuilder.append("Not a valid operation");
         responseEntity = new ResponseEntity(stringBuilder,HttpStatus.BAD_REQUEST);
         }
